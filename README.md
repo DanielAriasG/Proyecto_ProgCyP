@@ -59,7 +59,8 @@ Para ejecutar la versión multithread/multiproceso, ejecuta:
 python script.py --file1=secuencia1.fasta --file2=secuencia2.fasta --output=dotplot.txt --threads=4
 ```
 
-- `--threads`: Especifica el número de hilos o procesos a utilizar.
+- `--threads`: Especifica el número de hilos a utilizar.
+- `--processes`: Especifica el número de procesos a utilizar.
 
 ## Descripción del Código
 - **leer_secuencia**: Lee y devuelve la secuencia de un archivo FASTA.
@@ -67,10 +68,11 @@ python script.py --file1=secuencia1.fasta --file2=secuencia2.fasta --output=dotp
 - **generar_dotplot_mpi**: Genera el dotplot utilizando MPI para dividir la tarea entre procesos.
 - **generar_dotplot_multihilo**: Genera el dotplot utilizando procesamiento multithread/multiproceso.
 - **guardar_dotplot**: Guarda la matriz del dotplot en un archivo de texto.
+- **filtrar_dotplot**: Aplica un filtro a la matriz del dotplot para resaltar las líneas diagonales y detectar similitudes.
 - **main**: Controla la ejecución del programa, mide el tiempo de lectura y generación del dotplot, y muestra los resultados.
 
 ## Resultados
-El programa genera un archivo de salida (`dotplot.txt`) que contiene la matriz del dotplot. Puedes usar herramientas como programas de visualización de matrices o scripts adicionales para representar gráficamente el dotplot.
+El programa genera un archivo de salida (`dotplot.png`) que contiene la matriz del dotplot. Puedes usar herramientas como programas de visualización de matrices o scripts adicionales para representar gráficamente el dotplot.
 
 ## Notas
 - Asegúrate de que tu sistema cumpla con los requisitos de hardware y software necesarios para ejecutar CUDA y MPI.
